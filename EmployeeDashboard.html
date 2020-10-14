@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet"  type="text/css href="searchbar.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+
+
+
+
+table {
+border-collapse : collapse;
+}
+table td,th {
+border :1px solid black;
+}
+ 
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ .button {
+  background-color: #0040ff; 
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button5 {border-radius:20px}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0066ff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;  
+ 
+</style>
+
+</head>
+<body>
+
+
+<br></br>
+<h6>Enter Candidate Name in the SearchBar: </h6>
+<div class="main">
+
+<tr>
+<th><input id="searchbar" onkeyup="search_names()" type="text" style="width: 800px; height: 50px" name="box"placeholder=""></th>
+
+<button style="width: 100px; heaight:10px" class="button button5">Search</button>
+     
+</tr>
+<br></br>
+<div="container-fluid">
+<p>Order by: Candidate Name<b>&#8593;&#124;</b> Company Name<b>&#8593;&#124;</b> classJoining Date<b>&#8593;&#124;</b>EndDate <b>&#8593;</b></p>
+</div>
+
+<table>
+<tr>
+<th>View</th>
+<th>Name of Candidate </th>
+<th>Candidate Email ID</th>
+<th> Candidate Mobile Number</th>
+<th>Company Name</th>
+<th>Client Company Name</th>
+<th>Project Name</th>
+<th>Project Description</th>
+<th>Project Manager</th>
+<th>Project Manager Contact Number</th>
+<th>Joining Date of Project</th>
+<th>End Date of Project</th>
+<th>Skills</th>
+<th>Duration of Contact(in months)</th>
+<th>Salary of Candidate</th>
+<th>Monthly Cost of Jobseeker</th>
+<th> Bonus Cost of Jobseeker</th>
+<th>Requester Name</th>
+<th>Approver Name</th>
+<th>Approver Email ID</th>
+<th>Approver Phone Number</th>
+</tr>
+<tr>
+
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td><h5>Kushal Rao<h5></td>
+<td><h5 style="color: #fc83bf;">kushlrao@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 7586053047</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Swiggy</h5></td>
+<td><h5 style="color:#fc83bf;">Dashboard Developer</h5></td>
+<td><h5 style="color:#fc83bf;">Developed dshboards for educational institutes on Visual Basic</h5></td>
+<td><h5 style="color:#fc83bf;">Pinky Animesh Issac</h5></td>
+<td><h5 style="color:#fc83bf;">+91 9838915931</h5></td>
+<td><h5 style="color:#fc83bf;">21 Jul 2020 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Aug 2020 </h5></td>
+
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Lata Aurora</td>
+<td><h5 style="color:#fc83bf;">lataaurora@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 6643710370</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Amazon</h5></td>
+<td><h5 style="color:#fc83bf;">Intern Aws architect</h5></td>
+<td><h5 style="color:#fc83bf;">-NIL-</h5></td>
+<td><h5 style="color:#fc83bf;">Mayawati Dua</h5></td>
+<td><h5 style="color:#fc83bf;">+91 7212152696</h5></td>
+<td><h5 style="color:#fc83bf;">01 Jan 2019 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Jun 2019 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Tanay Agarwal</td>
+<td><h5 style="color:#fc83bf;">ktanayagarwal@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 935564309</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Flipkart</h5></td>
+<td><h5 style="color:#fc83bf;">Supply Chain Manager</h5></td>
+<td><h5 style="color:#fc83bf;">-NIL-</h5></td>
+<td><h5 style="color:#fc83bf;">Bishnu Kumar Media</h5></td>
+<td><h5 style="color:#fc83bf;">+91 7555173402</h5></td>
+<td><h5 style="color:#fc83bf;">21 Jul 2020 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Aug 2020 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Yogesh Rao</td>
+<td><h5 style="color:#fc83bf;">yogeshrao@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 7555059334</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">ZS</h5></td>
+<td><h5 style="color:#fc83bf;">DataEngineer</h5></td>
+<td><h5 style="color:#fc83bf;">Develops constructs,tests and maintains architectures,such as databases and large-scale processing systems</h5></td>
+<td><h5 style="color:#fc83bf;">charu Ghalib Jaggi</h5></td>
+<td><h5 style="color:#fc83bf;">+91 8555071150</h5></td>
+<td><h5 style="color:#fc83bf;">14 Jan 2020 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Jun 2020 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Sunita Sankar</td>
+<td><h5 style="color:#fc83bf;">sunitasankar@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 8555761007</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Myntra</h5></td>
+<td><h5 style="color:#fc83bf;">Sales Engineer</h5></td>
+<td><h5 style="color:#fc83bf;">Prepare and deliver technical presentations explainning products or services to existing and prospective customers</h5></td>
+<td><h5 style="color:#fc83bf;">Pravin Devan</h5></td>
+<td><h5 style="color:#fc83bf;">+91 8555734679</h5></td>
+<td><h5 style="color:#fc83bf;">02 Feb 2020 </h5></td>
+<td><h5 style="color:#fc83bf;">14 Apr 2020 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>arun Thaman</td>
+<td><h5 style="color:#fc83bf;">arunthaman@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 9555509155</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Zamato</h5></td>
+<td><h5 style="color:#fc83bf;">Hr Manager</h5></td>
+<td><h5 style="color:#fc83bf;">Develops policy and directs and candidates human resources activites</h5></td>
+<td><h5 style="color:#fc83bf;">Vicky Chopra</h5></td>
+<td><h5 style="color:#fc83bf;">+91 8555791635</h5></td>
+<td><h5 style="color:#fc83bf;">01 Jan 2020 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Jun 2020 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Jawahar Sanghvi</td>
+<td><h5 style="color:#fc83bf;">jawaharsanghvi@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 6643710370</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Tata Mahindra</h5></td>
+<td><h5 style="color:#fc83bf;">Electrical Designer</h5></td>
+<td><h5 style="color:#fc83bf;">-NIL-</h5></td>
+<td><h5 style="color:#fc83bf;">Munaf Lal Sundaram</h5></td>
+<td><h5 style="color:#fc83bf;">+91 9255553771</h5></td>
+<td><h5 style="color:#fc83bf;">01 Jan 2019 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Jun 2019 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Satishwar Chaudhry</td>
+<td><h5 style="color:#fc83bf;">satishwarchaudhry@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 9855564381</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">Maruti</h5></td>
+<td><h5 style="color:#fc83bf;">Accountant</h5></td>
+<td><h5 style="color:#fc83bf;">Provides Finicial information to management by researching and analyzing accounting data</h5></td>
+<td><h5 style="color:#fc83bf;">Nikika Qabool Gaba</h5></td>
+<td><h5 style="color:#fc83bf;">+91 8555489220</h5></td>
+<td><h5 style="color:#fc83bf;">14 Jan 2019 </h5></td>
+<td><h5 style="color:#fc83bf;">20 Jun 2020 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><input style="color:white"; type="button"   class="button button5" id="myBtn" value="View"  style="width: 100px; heaight:10px"></td>
+<td>Naseer Mittal</td>
+<td><h5 style="color:#fc83bf;">naseermittal@gmail.com</h5></td>
+<td><h5 style="color:#fc83bf;">+91 9455569273</h5></td>
+<td><h5 style="color:#fc83bf;">Cisco Systems,Mumbai</h5></td>
+<td><h5 style="color:#fc83bf;">TVS</h5></td>
+<td><h5 style="color:#fc83bf;">Software Engineer</h5></td>
+<td><h5 style="color:#fc83bf;">-NIL-</h5></td>
+<td><h5 style="color:#fc83bf;">Ajinkya Ram Mani</h5></td>
+<td><h5 style="color:#fc83bf;">+91 8555051911</h5></td>
+<td><h5 style="color:#fc83bf;">01 Jan 2019 </h5></td>
+<td><h5 style="color:#fc83bf;">01 Jun 2019 </h5></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+    <h5>Name Of Candidate:<span style="color:#fc83bf":>Kushal Rao </span></h5>
+	<h5>Candidate Email ID:<span style="color:#fc83bf":>kushlrao@gmail.com</span></h5>
+	<h5>Candidate Mobile Number:<span style="color:#fc83bf":>+91 7586053047</span></h5>
+	<h5>Company Name:<span style="color:#fc83bf":>Cisco Systems,Mumbai</span></h5>
+	<h5>Client Company Name:<span style="color:#fc83bf":>Swiggy</span></h5>
+	<h5>Project Name:<span style="color:#fc83bf":>Dashboard Developer</span></h5>
+	<h5>Project Manager:<span style="color:#fc83bf":>Pinky Animesh Issac</span></h5>
+	
+	<h5>Project Manager Contact Number:<span style="color:#fc83bf":>+91 9838915931</span></h5>
+	<h5>Project Description:</h5>
+	<textarea id="" name="" rows="6"cols="60">
+  	
+  </textarea>
+	<h5>Skillset:<span style="color:#fc83bf";>Microsoft Visual Basic,C#,SQLServer</span></h5>
+</div>
+               <div class="col">
+	<h5>Joining Date:<span style="color:#fc83bf":>21 Jul 2020</span></h5>
+	<h5>End Date:<span style="color:#fc83bf":>20 Aug 2020</span></h5>
+    <h5>Duration of Contact(in months):<span style="color:#fc83bf":>3 months</span></h5>
+	<h5>Salary of Candidate:<span style="color:#fc83bf":>30,000Rs</span></h5>
+	<h5>Monthly Cost of Jobseeker:<span style="color:#fc83bf":>10,000 Rs.</span></h5>
+	<h5>Bonus Cost of Jobseeker:<span style="color:#fc83bf":>NIL</span></h5>
+	<h5>Requester Name:<span style="color:#fc83bf":>Nitin Sant </span></h5>
+	<h5>Approver Name:<span style="color:#fc83bf":>Vikeant Chandra Acharya</span></h5>
+	<h5>Approver Email ID:<span style="color:#fc83bf":>vikrarya@gmail.com</span></h5>
+	<h5>Approver Phone Number:<span style="color:#fc83bf":>+9104482772869</span></h5>
+	
+</div>            
+                
+            </div>        
+        </div>
+	
+  </div>
+
+</div>
+<script>
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
